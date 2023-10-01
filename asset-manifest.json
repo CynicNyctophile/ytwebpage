@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ytwebpage/static/css/main.7972b488.css",
+    "main.js": "/ytwebpage/static/js/main.b9aae4d0.js",
+    "index.html": "/ytwebpage/index.html",
+    "main.7972b488.css.map": "/ytwebpage/static/css/main.7972b488.css.map",
+    "main.b9aae4d0.js.map": "/ytwebpage/static/js/main.b9aae4d0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7972b488.css",
+    "static/js/main.b9aae4d0.js"
+  ]
+}
