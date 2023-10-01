@@ -1,38 +1,148 @@
-.App {
-  text-align: center;
+body {
+    background-color: #111927;
+    background-image:
+        radial-gradient(at 47% 33%, hsl(271, 49%, 39%) 0, transparent 59%),
+        radial-gradient(at 82% 65%, hsl(218, 74%, 28%) 0, transparent 55%);
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.logo-banner-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* Center horizontally */
+    justify-content: center;
+    /* Center vertically */
+    text-align: center;
+    /* Center text within the div */
 }
 
-.App-link {
-  color: #61dafb;
+.logo::before,
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 75%);
+    border-radius: 50%;
+    /* Use border-radius to create a circular vignette */
+    z-index: 1;
+    /* Make sure the vignette is behind the logo and banner */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo {
+    width: 16.6%;
+    height: auto;
+    /* Set height to auto to maintain aspect ratio */
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+    /* Set height to auto to maintain aspect ratio */
+}
+
+.description {
+    font-size: 18px;
+}
+
+.content {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.short-videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 5px;
+}
+
+.short-videos>div {
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.07);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    box-shadow: 15px 15px 30px #0e051a, -15px -15px 30px #401b74;
+    color: #ffffff;
+    text-align: center;
+    /* Add this property to make thumbnails fit properly */
+    overflow: hidden;
+    /* Add padding to the left and right sides */
+    padding: 10px;
+    transition: filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Add a lighter colored blurred highlight on hover */
+.short-videos>div:hover {
+    filter: brightness(100%);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Add padding to the inner wrapper */
+.short-videos .video-wrapper {
+    padding: 10px;
+    /* Add padding on all sides */
+}
+
+/* Add margin below the video title */
+.short-videos .video-title {
+    margin-bottom: 10px;
+}
+
+
+footer {
+    text-align: center;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-logo {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    filter: brightness(80%);
+    transition: filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Add a lighter colored blurred highlight */
+.social-logo:hover {
+    filter: brightness(100%);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
 }
